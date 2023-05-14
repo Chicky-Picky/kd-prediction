@@ -59,6 +59,7 @@ The PDB ids of dimer complexes (both Hetero and homo dimers)  were obtained usin
 ### Results:
 This section analyzes the performance of the proposed method to predict electrostatic energy, MM/GBSA free energy and $K_d$. The Loss and MSD metrics are used to evaluate precizion of predictions.
 
+In case of electrostatincs energy prediction the molecules of length 2, 4, 8, 16 and 32 atoms were concidered. As we expected GAT models had a way better performance than FC.
 
 <a name="sec6"></a>
 ### Conclusions:
