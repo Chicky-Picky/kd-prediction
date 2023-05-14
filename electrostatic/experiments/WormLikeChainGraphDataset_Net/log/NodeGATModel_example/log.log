@@ -1,0 +1,30 @@
+2023-05-11 18:09:58,356 - train - INFO - WormLikeChainGraphDataset(10)
+2023-05-11 18:09:58,363 - train - INFO - NodeGATModel(
+  (convs): ModuleList(
+    (0): GATConv(1, 2, heads=1)
+    (1-3): 3 x GATConv(2, 2, heads=1)
+  )
+  (batchnorms): ModuleList(
+    (0-2): 3 x BatchNorm(2)
+  )
+  (mlp): Sequential(
+    (0): Linear(in_features=2, out_features=2, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=2, out_features=1, bias=True)
+    (3): ReLU()
+    (4): Linear(in_features=1, out_features=1, bias=True)
+  )
+)
+Trainable parameters: 77
+2023-05-11 18:10:04,011 - trainer.trainer - INFO -     epoch          : 1
+2023-05-11 18:10:04,011 - trainer.trainer - INFO -     loss           : 0.6947363544022664
+2023-05-11 18:10:04,012 - trainer.trainer - INFO -     mean_squared_relative_mse: 968.1390666682273
+2023-05-11 18:10:09,224 - trainer.trainer - INFO -     val_epoch      : 1
+2023-05-11 18:10:09,225 - trainer.trainer - INFO -     val_loss       : 0.536756306886673
+2023-05-11 18:10:09,226 - trainer.trainer - INFO -     val_mean_squared_relative_mse: 1346.7475891113281
+2023-05-11 18:10:14,651 - trainer.trainer - INFO -     epoch          : 2
+2023-05-11 18:10:14,651 - trainer.trainer - INFO -     loss           : 0.6596885376493447
+2023-05-11 18:10:14,652 - trainer.trainer - INFO -     mean_squared_relative_mse: 692.5562639832497
+2023-05-11 18:10:20,090 - trainer.trainer - INFO -     val_epoch      : 2
+2023-05-11 18:10:20,091 - trainer.trainer - INFO -     val_loss       : 0.5266918689012527
+2023-05-11 18:10:20,092 - trainer.trainer - INFO -     val_mean_squared_relative_mse: 1321.0105285644531

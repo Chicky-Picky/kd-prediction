@@ -1,0 +1,56 @@
+2023-05-11 18:09:09,655 - train - INFO - WormLikeChainGraphDataset(10)
+2023-05-11 18:09:09,665 - train - INFO - EdgeConvNodeGATModel(
+  (convs): ModuleList(
+    (0): MetaLayer(
+      edge_model=EdgeConvLayer(
+      (edge_mlp): Sequential(
+        (0): Linear(in_features=3, out_features=2, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=2, out_features=2, bias=True)
+      )
+    ),
+      node_model=GATConv(1, 2, heads=1),
+      global_model=None
+    )
+    (1-3): 3 x MetaLayer(
+      edge_model=EdgeConvLayer(
+      (edge_mlp): Sequential(
+        (0): Linear(in_features=6, out_features=2, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=2, out_features=2, bias=True)
+      )
+    ),
+      node_model=GATConv(2, 2, heads=1),
+      global_model=None
+    )
+  )
+  (linear_layer_nodes): ModuleList(
+    (0-2): 3 x Linear(in_features=2, out_features=2, bias=True)
+  )
+  (linear_layer_edges): ModuleList(
+    (0-2): 3 x Linear(in_features=2, out_features=2, bias=True)
+  )
+  (batchnorms): ModuleList(
+    (0-2): 3 x BatchNorm(2)
+  )
+  (mlp): Sequential(
+    (0): Linear(in_features=2, out_features=2, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=2, out_features=1, bias=True)
+    (3): ReLU()
+    (4): Linear(in_features=1, out_features=1, bias=True)
+  )
+)
+Trainable parameters: 195
+2023-05-11 18:09:16,371 - trainer.trainer - INFO -     epoch          : 1
+2023-05-11 18:09:16,371 - trainer.trainer - INFO -     loss           : 0.20849128031568398
+2023-05-11 18:09:16,372 - trainer.trainer - INFO -     mean_squared_relative_mse: 206.22643373608298
+2023-05-11 18:09:23,807 - trainer.trainer - INFO -     val_epoch      : 1
+2023-05-11 18:09:23,808 - trainer.trainer - INFO -     val_loss       : 0.06993445940315723
+2023-05-11 18:09:23,808 - trainer.trainer - INFO -     val_mean_squared_relative_mse: 163.53228378295898
+2023-05-11 18:09:29,697 - trainer.trainer - INFO -     epoch          : 2
+2023-05-11 18:09:29,697 - trainer.trainer - INFO -     loss           : 0.20338324026670307
+2023-05-11 18:09:29,698 - trainer.trainer - INFO -     mean_squared_relative_mse: 198.32469459733693
+2023-05-11 18:09:35,536 - trainer.trainer - INFO -     val_epoch      : 2
+2023-05-11 18:09:35,537 - trainer.trainer - INFO -     val_loss       : 0.06649742275476456
+2023-05-11 18:09:35,537 - trainer.trainer - INFO -     val_mean_squared_relative_mse: 155.0447769165039

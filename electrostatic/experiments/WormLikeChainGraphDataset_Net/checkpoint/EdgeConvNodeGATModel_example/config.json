@@ -1,0 +1,67 @@
+{
+    "name": "WormLikeChainGraphDataset_Net",
+    "outdir": "../electrostatic/experiments/",
+    "device": "cpu",
+    "arch": {
+        "type": "EdgeConvNodeGATModel",
+        "args": {
+            "node_feature_dim": 1,
+            "node_embedding_dim": 2,
+            "edge_feature_dim": 1
+        }
+    },
+    "dataset_train": {},
+    "dataset_valid": {},
+    "dataset": {
+        "type": "WormLikeChainGraphDataset",
+        "args": {
+            "root": "../electrostatic/data/",
+            "raw_dirname": "mols/"
+        }
+    },
+    "dataset_transforms": {},
+    "dataloader": {
+        "type": "set_dataloaders",
+        "args": {
+            "batch_size": 1,
+            "shuffle": true,
+            "validation_split": 0.2,
+            "num_workers": 2
+        }
+    },
+    "optimizer": {
+        "type": "Adam",
+        "args": {
+            "lr": 0.001,
+            "weight_decay": 0,
+            "amsgrad": true
+        }
+    },
+    "loss": {
+        "type": "mse_loss",
+        "args": {}
+    },
+    "metrics": {
+        "metric_1": {
+            "type": "mean_squared_relative_mse",
+            "args": {}
+        }
+    },
+    "lr_scheduler": {
+        "type": "StepLR",
+        "args": {
+            "step_size": 1000000,
+            "gamma": 0.1
+        }
+    },
+    "trainer": {
+        "type": "Trainer",
+        "args": {
+            "epochs": 2,
+            "checkpoint_freq": 10,
+            "monitor": "min val_loss",
+            "early_stop": 10,
+            "tensorboard": true
+        }
+    }
+}
