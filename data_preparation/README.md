@@ -7,7 +7,7 @@ You may want to run our utility scripts as follows:
 - To extract interfaces from corrected pdb-files into pdb-files: `python interface_extraction.py`
 - To create csv-files with atom cooordinates and one-hot-encoding features: `python add_features_to_interface.py`
 
-`clean_pdb/` directory contains physically corrected pdb-files (please, refer to **GBSA free energy prediction** section [Methods](https://github.com/Chicky-Picky/kd-prediction/#sec2)).
+`clean_pdb/` directory contains physically corrected pdb-files (please, refer to **GBSA free energy prediction** section [Methods](https://github.com/Chicky-Picky/kd-prediction/#methods)).
 
 `interface_pdb/` directory contains pdb-files with interfaces only, after running `interface_extraction.py`.
 
