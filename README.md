@@ -39,9 +39,6 @@ The PDB ids of dimer complexes (both Hetero and homo dimers)  were obtained usin
 
 3. **$K_d$ prediction.** Finally, to predict $K_d$ we used FC and GAT models accepting as input features either embeddings extracted from GAT model trained on GBSA dataset, or from ProteinMPNN's encoder. We decided to predict $ln(K_d)$ to avoid issues with metrics and make the problem a little closer to the previous one. The PDBbind database [[8]](PDBbind) was chosen as a core of $K_d$ prediction dataset. PDBbind contains a complex Ids, resolutions of structure solving, experimentally measured $K_d$ values and other useful data. We filtered out the poorly solved structures in order to reduce the noise level in data. Structures with resolution lower than 5A were dropped from data. PDBs were processed to extract interfaces (the same cutoff parameter) and construct graphs. The resulting dataset contained about 1300 objects (pairs of interface graph and $\ln(K_d)$) in total. Train, validation and test datasets were obtained by random splitting with relative sizes 0.7, 0.2 and 0.1 respectively.
 
-
-
-
 <a name="sec3"></a>
 ### System requirements:
 **Key packages and programs:**
@@ -60,6 +57,8 @@ The PDB ids of dimer complexes (both Hetero and homo dimers)  were obtained usin
 This section analyzes the performance of the proposed method to predict electrostatic energy, MM/GBSA free energy and $K_d$. The Loss and MSD metrics are used to evaluate precizion of predictions.
 
 In case of electrostatincs energy prediction the molecules of length 2, 4, 8, 16 and 32 atoms were concidered. As we expected GAT models had a way better performance than FC.
+![What is this](electrotrain.png)
+
 
 <a name="sec6"></a>
 ### Conclusions:
