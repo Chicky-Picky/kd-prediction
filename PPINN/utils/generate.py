@@ -168,5 +168,5 @@ def save_potential(path_to_mol_dir,
 
 
 if __name__ == "__main__":
-    save_charged_chains(path_to_outdir="data/mols", bond_length=1.53, size=10, chain_len=2)
-    save_potential(path_to_mol_dir="data/mols", path_to_outdir="data")
+    save_charged_chains(path_to_outdir="../electrostatic/data/mols", bond_length=1.53, size=10, chain_len=2)
+    save_potential(path_to_mol_dir="../electrostatic/data/mols", path_to_outdir="data")
