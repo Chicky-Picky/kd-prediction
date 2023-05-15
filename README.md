@@ -60,7 +60,7 @@ In case of electrostatincs energy prediction the molecules of length 2, 4, 8, 16
 ![Electrostatics_train](/figures/electrostatics_train.png)
 ![Electrostatics_test](/figures/electrostatics_test.png)
 ![dG_result](/figures/dGGBSA.png)
-![kd_ProteinMPNN_Result](/figures/kd.png)
+![kd_ProteinMPNN_Result](/figures/kd_prediction.png)
 
 
 <a name="sec6"></a>
