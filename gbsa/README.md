@@ -8,4 +8,4 @@ To run the examples after cloning our git repository, please, make sure you are 
 You may want to train our model from example config as follows:
 - `EdgeConvNodeGATModel`: `python train.py -c ../gbsa/configs/config_graph_EdgeConvNodeGATModel.json --run-dir EdgeConvNodeGATModel_example`
 
-You will find the results of the training in `experiments` directory: checkpoints and logs will be stored in `experiments/GbdaDgGraphDataset_Net/checkpoint` and `experiments/GbdaDgGraphDataset_Net/log` directories, respectively.
+You will find the results of the training in `experiments` directory: checkpoints and logs will be stored in `experiments/GbsaDgGraphDataset_Net/checkpoint` and `experiments/GbsaDgGraphDataset_Net/log` directories, respectively.
