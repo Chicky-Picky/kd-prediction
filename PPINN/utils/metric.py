@@ -23,5 +23,4 @@ def top_k_acc(output, target, k=3):
 
 def mean_squared_relative_mse(output, target):
     with torch.no_grad():
-        MSE = F.mse_loss(output, target)
-    return (MSE / (target ** 2).mean()).item()
+        return torch.mean((output - target) ** 2 / target ** 2).item()
