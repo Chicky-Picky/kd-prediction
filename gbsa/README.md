@@ -1,7 +1,11 @@
 # GBSA energy for real molecules prediction
-_This directory provides examples for GBSA energy for real molecules prediction_
+_This directory provides examples for GBSA energy of real molecules prediction_
 
-To run the examples after cloning our git repository, please, make sure you are in `kd-prediction/kd-prediction/PPINN` directory.
+Prior to training models, you need to prepare the data and calculate GBSA energy of your complexes with AMBER package. On data preparation, please, refer to the [data_preparation](https://github.com/Chicky-Picky/kd-prediction/tree/main/data_preparation#data-preparation) section.
 
-You may want to train our models from example config as follows:
+To run the examples after cloning our git repository, please, make sure you are in `kd-prediction/PPINN` directory.
+
+You may want to train our model from example config as follows:
 - `EdgeConvNodeGATModel`: `python train.py -c ../gbsa/configs/config_graph_EdgeConvNodeGATModel.json --run-dir EdgeConvNodeGATModel_example`
+
+You will find the results of the training in `experiments` directory: checkpoints and logs will be stored in `experiments/GbdaDgGraphDataset_Net/checkpoint` and `experiments/GbdaDgGraphDataset_Net/log` directories, respectively.
