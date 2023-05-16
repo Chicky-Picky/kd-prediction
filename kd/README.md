@@ -17,8 +17,9 @@ You will find the results of the training in `experiments` directory: checkpoint
 
 If you intend to use ProteinMPNN $`C_\alpha`$ only model embeddings, please, follow the instructions:
 1) clone ProteinMPNN repository
-2) run `python ProteinMPNN/helper_scripts/parse_multiple_chains.py` with relevant path arguments and `--ca_only` flag to parse your pdb-files
-3) make sure you are in `kd-prediction/kd-prediction/kd/ProteinMPNN` directory and run `python add_embeddings_to_interface.py` to store embeddings in the dataset
-4) make sure you are in `kd-prediction/kd-prediction/PPINN` directory and run `python train.py -c ../kd/ProteinMPNN/configs/config_graph_EdgeConvNodeGATModel.json --run-dir ProteinMPNN_embeddings_example`
+2) run `python ProteinMPNN/helper_scripts/parse_multiple_chains.py` with relevant path arguments and `--ca_only` flag to parse your raw pdb-files
+3) make sure you are in `kd-prediction/kd-prediction/kd/ProteinMPNN` directory and check whether there is `interface_pdb` directory containing pdb-files with interfaces only
+4) run `python add_embeddings_to_interface.py` to store embeddings in the dataset
+5) make sure you are in `kd-prediction/kd-prediction/PPINN` directory and run `python train.py -c ../kd/ProteinMPNN/configs/config_graph_EdgeConvNodeGATModel.json --run-dir ProteinMPNN_embeddings_example`
 
 You will find the results of the training in `experiments` directory: checkpoints and logs will be stored in `experiments/GbsaKdGraphDataset_Net/checkpoint` and `experiments/GbsaKdGraphDataset_Net/log` directories, respectively.

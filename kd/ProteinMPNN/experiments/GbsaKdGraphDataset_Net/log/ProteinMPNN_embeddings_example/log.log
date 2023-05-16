@@ -1,5 +1,5 @@
-2023-05-14 19:37:37,278 - train - INFO - GbsaKdGraphDataset(3)
-2023-05-14 19:37:37,291 - train - INFO - EdgeConvNodeGATModel(
+2023-05-16 22:43:12,301 - train - INFO - GbsaKdGraphDataset(3)
+2023-05-16 22:43:12,319 - train - INFO - EdgeConvNodeGATModel(
   (convs): ModuleList(
     (0): MetaLayer(
       edge_model=EdgeConvLayer(
@@ -42,15 +42,15 @@
   )
 )
 Trainable parameters: 957
-2023-05-14 19:37:42,468 - trainer.trainer - INFO -     epoch          : 1
-2023-05-14 19:37:42,469 - trainer.trainer - INFO -     loss           : 387.4870300292969
-2023-05-14 19:37:42,470 - trainer.trainer - INFO -     mean_squared_relative_mse: 1.0148653586705525
-2023-05-14 19:37:48,655 - trainer.trainer - INFO -     val_epoch      : 1
-2023-05-14 19:37:48,655 - trainer.trainer - INFO -     val_loss       : 0
-2023-05-14 19:37:48,656 - trainer.trainer - INFO -     val_mean_squared_relative_mse: 0
-2023-05-14 19:37:54,543 - trainer.trainer - INFO -     epoch          : 2
-2023-05-14 19:37:54,543 - trainer.trainer - INFO -     loss           : 387.45725504557294
-2023-05-14 19:37:54,544 - trainer.trainer - INFO -     mean_squared_relative_mse: 1.0148078004519145
-2023-05-14 19:38:00,084 - trainer.trainer - INFO -     val_epoch      : 2
-2023-05-14 19:38:00,085 - trainer.trainer - INFO -     val_loss       : 0
-2023-05-14 19:38:00,085 - trainer.trainer - INFO -     val_mean_squared_relative_mse: 0
+2023-05-16 22:43:20,037 - trainer.trainer - INFO -     epoch          : 1
+2023-05-16 22:43:20,038 - trainer.trainer - INFO -     loss           : 368.2233174641927
+2023-05-16 22:43:20,039 - trainer.trainer - INFO -     mean_squared_relative_mse: 0.9915417035420736
+2023-05-16 22:43:27,218 - trainer.trainer - INFO -     val_epoch      : 1
+2023-05-16 22:43:27,219 - trainer.trainer - INFO -     val_loss       : 0
+2023-05-16 22:43:27,220 - trainer.trainer - INFO -     val_mean_squared_relative_mse: 0
+2023-05-16 22:43:34,089 - trainer.trainer - INFO -     epoch          : 2
+2023-05-16 22:43:34,089 - trainer.trainer - INFO -     loss           : 368.2099202473958
+2023-05-16 22:43:34,090 - trainer.trainer - INFO -     mean_squared_relative_mse: 0.9915315906206766
+2023-05-16 22:43:40,460 - trainer.trainer - INFO -     val_epoch      : 2
+2023-05-16 22:43:40,461 - trainer.trainer - INFO -     val_loss       : 0
+2023-05-16 22:43:40,461 - trainer.trainer - INFO -     val_mean_squared_relative_mse: 0

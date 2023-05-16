@@ -10,6 +10,7 @@ from protein_mpnn_utils import StructureDataset, StructureDatasetPDB, ProteinMPN
 import numpy as np
 import math
 import pandas as pd
+from pyxmolpp2 import PdbFile
 from tqdm import tqdm
 
 
@@ -39,7 +40,7 @@ bias_by_res_dict = None
 bias_AAs_np = np.zeros(len(alphabet))
 omit_AAs_np = np.array([AA in omit_AAs_list for AA in alphabet]).astype(np.float32)
 
-dataset = StructureDataset("AAA/parsed_pdbs.jsonl", truncate=None, max_length=200000, verbose=False)
+dataset = StructureDataset("parsed_pdbs.jsonl", truncate=None, max_length=200000, verbose=False)
 
 device = torch.device("cuda:0" if (torch.cuda.is_available()) else "cpu")
 checkpoint = torch.load("ca_model_weights/v_48_002.pt", map_location=device)
@@ -51,8 +52,8 @@ encoder_model = Encoder(model)
 encoder_model.eval()
 encoder_model.to(device)
 
-path = 'data_kd/data/'
-os.makedirs(path, exist_ok=True)
+embs_path = 'embeddings/'
+os.makedirs(embs_path, exist_ok=True)
 
 for ix, protein in enumerate(tqdm(dataset)):
     batch_clones = [copy.deepcopy(protein)]
@@ -83,5 +84,22 @@ for ix, protein in enumerate(tqdm(dataset)):
                 df.index = df.index + 1
             cnt += 1
 
-    df.to_csv(path + protein['name'] + '.pdb.csv')
+    df.to_csv(embs_path + protein['name'] + '.pdb.csv')
 
+kd_data_path = "data_kd/data/"
+os.makedirs(kd_data_path, exist_ok=True)
+
+for ix, protein in enumerate(tqdm(dataset)):
+    interface = PdbFile("interface_pdb/" + protein['name'] + ".pdb").frames()[0]
+    interface_coords = [[atom.r.x, atom.r.y, atom.r.z] for atom in interface.molecules.atoms]
+
+    path_to_embedding_csv = f"{embs_path}/{protein['name']}.pdb.csv"
+    protein_df = pd.read_csv(path_to_embedding_csv)
+    interface_df = pd.DataFrame(columns=['x', 'y', 'z', 'embedding'])
+
+    for i, row in protein_df.iterrows():
+        if [row['x'], row['y'], row['z']] in interface_coords:
+            interface_df.loc[-1] = [row['x'], row['y'], row['z'], row['embedding']]
+            interface_df.index = interface_df.index + 1
+
+    interface_df.to_csv(os.path.join(kd_data_path, f"{protein['name']}.pdb.csv"), index=False)
