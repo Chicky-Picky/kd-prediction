@@ -45,7 +45,7 @@ The workflow consists of steps:
 **Key packages and programs:**
 - the majority of scripts are written on `Python3` and there are also `bash` scripts
 - `slurm` (20.11.8) cluster management and job scheduling system
-- [pyxmolpp2](https://github.com/sizmailov/pyxmolpp2) (1.6.0, note that this library works best under Linux) in-house python library for processing molecular structures and MD trajectories
+- [pyxmolpp2](https://github.com/sizmailov/pyxmolpp2) (1.6.0) in-house python library for processing molecular structures and MD trajectories
 - [pytorch](https://pytorch.org) (1.13.1+cu11.7) the core of NN workflow
 - [pytorch geometric](https://pytorch.org) (2.2.0) the core of graph NN models
 - [biobb](https://biobb.readthedocs.io/en/latest/readme.html) software library for biomolecular simulation workflows
