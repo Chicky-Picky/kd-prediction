@@ -14,12 +14,12 @@ Then you may want to train our models from example configs as follows:
 You will find the results of the training in `experiments` directory: checkpoints and logs for both models will be stored in `experiments/WormLikeChainGraphDataset_Net/checkpoint` and `experiments/WormLikeChainGraphDataset_Net/log` directories, respectively.
 
 To check training process via plotting train and validation losses and metrics, please, first make sure you are in `kd-prediction/PPINN` directory and then run our script as follows:
-`python train_plotter.py`
+- `python train_plotter.py`
 
 You will find the resulting pdf-file `TrainResults.pdf` in `experiments/WormLikeChainGraphDataset_Net/log/EdgeConvNodeGATModel_example/` directory.
 
 To check training results and test statistics via plotting, please, first make sure you are in `kd-prediction/PPINN` directory and then run our scripts as follows:
-`python test.py`
-`python test_plotter.py`
+- `python test.py`
+- `python test_plotter.py`
 
-You will find the resulting pnf-files in `experiments/WormLikeChainGraphDataset_Net/test_log/EdgeConvNodeGATModel_example/` directory.
+You will find the resulting png-files in `experiments/WormLikeChainGraphDataset_Net/test_log/EdgeConvNodeGATModel_example/` directory.
