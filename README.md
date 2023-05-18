@@ -9,6 +9,7 @@ _This repository provides results and code for the project "Prediction of protei
 * Olga Lebedenko _(BioNMR laboratory, Saint Petersburg State University, Saint Petersburg, Russia)_
 * Nikolai Skrynnikov _(BioNMR laboratory, Saint Petersburg State University, Saint Petersburg, Russia)_
 
+**Table of contents:**
 - [Background](#sec1) </br>
 - [Methods](#sec2) </br>
 - [System requirements](#sec3) </br>
@@ -37,7 +38,7 @@ The workflow consists of steps:
 | *Figure 1. Realization steps.* |
 
 1. **Electrostatic energy prediction.** As a rough approximation of our problem, we considered a well-defined one: prediction of electrostatic energy for chain-like molecules. This problem has a direct solution, the Coulomb law, and it is suitable and convenient for model and pipeline development and adjustment. The dataset consisted of a number of chain-like molecules with electrostatic energy calculated for them. The self-avoiding random walk algorithm [[1]](selfavoid1) was implemented in order to obtain structures of chain-like molecules, the distance between two adjacent points was set to 1.53 A (the length of C-C bond). After chain-like molecules generation we assigned charges from uniform distribution $U[-1;1]$ to all point-atoms in molecules. Targets were calculated for all chain-like molecules according to the Coulomb law. We implemented, trained and tested two types of neural networks to predict electrostatic energy: one consisting of several fully-connected layers (FC model) considered as a baseline and graph attention neural network with both vertex and edge convolutions (GAT). The fully-connected model operated with the set of atom features: coordinates $x_i, y_i, z_i$ and charges $q_i$, $i$ lists all atoms. The augmentation was applied to the dataset in order to improve results: all the molecules were rotated 4 times around the random axis by the random angle. This trick helped the FC model learn the rotational invariance. 15000 objects (3000 unique molecules) were in dataset for FC training. In the case of the GAT model the input data consisted of graphs. For all generated chain molecules the fully connected graphs were created, the nodes corresponded to the point-atoms, the charge on the atom was the only node feature. The edge feature corresponded to the distance between the atoms connected with current edge. There were 5000 graphs in train sample.  
-2. **GBSA free energy prediction.** As a more complex and consistent problem, we considered prediction of free energy of protein-protein complexes estimated with MM/GBSA method [[2]](GBSA1),  [[3]](GBSA2). The PDB ids of dimer complexes (both Hetero and homo dimers)  were obtained using the [Dockground database](https://dockground.compbio.ku.edu/bound/index.php). In order to avoid redundancy in data we clustered complexes with respect to sequence. To solve the clusterization problem we used the [RCSB database]() of sequence clusters with 30% similarity threshold. Both sequences in complex were matched to their clusters with respect to RCSB database resulting in a pair of cluster numbers for complex, this unordered pair is thought to be a complex cluster label. Free energy (dG) was estimated with the GBSA method for all of the structures employing the Amber package [[4]](amber). The calculation of the dG for GBSA dataset had the following pipeline. The raw PDBs were processed via biobb [[5]](biobb) to fix the heavy atom absence and complex geometries were minimized employing the phenix package [[6]](phenix). Original hydrogens obtained from solving the structure were removed using Amber package. We used the PDB2PQR tool [[7]](PDB2PQR) to protonate complexes in target acidity (pH = 7.2). Finally, dG for complexes were calculated within the MM/GBSA method in the Amber. The obtained dataset was then splitted into train, validation and test samples with respect to clasterization, this guaranteed homogeneity of the data and absence of outliers in the samples. The dataset consisted of 10725 complexes in general: 5 668 in complexes train, 3 188 in validation and 1 869 in test. Protein-protein interaction interfaces were extracted from PDBs of complexes, residue of one interacting chain is considered to be on the interface if distance between any of its atoms and any atom of other interaction chain is less than cutoff parameter (cutoff = 5A). Large interfaces containing more than 1000 atoms were dropped from datasets due to their high memory usage in training. Interfaces were processed into graphs for graph neural network. One-hot encoding technique with the respect to Amber atom type was applied to construct features for graph nodes, pairwise distances between atoms were used as edge features. We implemented, trained and tested one more type of neural networks to predict GBSA free energy: GAT model with both vertex and edge attention mechanisms. The internal embedding size was set to 16.
+2. **GBSA free energy prediction.** As a more complex and consistent problem, we considered prediction of free energy of protein-protein complexes estimated with MM/GBSA method [[2]](GBSA1),  [[3]](GBSA2). The PDB ids of dimer complexes (both Hetero and homo dimers)  were obtained using the [Dockground database](https://dockground.compbio.ku.edu/bound/index.php). In order to avoid redundancy in data we clustered complexes with respect to sequence. To solve the clusterization problem we used the [RCSB database](https://www.rcsb.org/docs/grouping-structures/sequence-based-clustering) of sequence clusters with 30% similarity threshold. Both sequences in complex were matched to their clusters with respect to RCSB database resulting in a pair of cluster numbers for complex, this unordered pair is thought to be a complex cluster label. Free energy (dG) was estimated with the GBSA method for all of the structures employing the Amber package [[4]](amber). The calculation of the dG for GBSA dataset had the following pipeline. The raw PDBs were processed via biobb [[5]](biobb) to fix the heavy atom absence and complex geometries were minimized employing the phenix package [[6]](phenix). Original hydrogens obtained from solving the structure were removed using Amber package. We used the PDB2PQR tool [[7]](PDB2PQR) to protonate complexes in target acidity (pH = 7.2). Finally, dG for complexes were calculated within the MM/GBSA method in the Amber. The obtained dataset was then splitted into train, validation and test samples with respect to clasterization, this guaranteed homogeneity of the data and absence of outliers in the samples. The dataset consisted of 10725 complexes in general: 5 668 in complexes train, 3 188 in validation and 1 869 in test. Protein-protein interaction interfaces were extracted from PDBs of complexes, residue of one interacting chain is considered to be on the interface if distance between any of its atoms and any atom of other interaction chain is less than cutoff parameter (cutoff = 5A). Large interfaces containing more than 1000 atoms were dropped from datasets due to their high memory usage in training. Interfaces were processed into graphs for graph neural network. One-hot encoding technique with the respect to Amber atom type was applied to construct features for graph nodes, pairwise distances between atoms were used as edge features. We implemented, trained and tested one more type of neural networks to predict GBSA free energy: GAT model with both vertex and edge attention mechanisms. The internal embedding size was set to 16.
 3. **$K_d$ prediction.** We decided to predict $ln(K_d)$ to avoid issues with metrics and make the problem a little closer to the previous one. In this part of study we used GAT predicting module accepting as input features either embeddings extracted from GAT model trained on GBSA dataset, or from ProteinMPNN's encoder. ProteinMPNN model [[8]](ProteinMPNN) is developed to predict the amino acid sequence by the structure of a protein or protein-protein complex. Therefore, its embeddings potentially contain the relevant information about the complex structure, so can be used to solve our problem. We extracted embeddings from `ca_model_weights/v_48_002.pt` model checkpoint. This model considers $C_\alpha$ atoms only. The embedding dimension is default and equals to 128. As a core of $K_d$ prediction dataset the PDBbind database [[8]](PDBbind) was chosen. PDBbind contains a complex Ids, resolutions of structure solving, experimentally measured $K_d$ values and other useful data. We filtered out the poorly solved structures in order to reduce the noise level in data. Structures with resolution lower than 5A were dropped from data. PDBs were processed to extract interfaces (the same cutoff parameter) and construct graphs. The resulting dataset contained about 1300 objects (pairs of interface graph and $\ln(K_d)$) in total. Train, validation and test datasets were obtained by random splitting with relative sizes 0.7, 0.2 and 0.1 respectively.
 
 <a name="sec3"></a>
@@ -77,7 +78,7 @@ The distribution for pairs of charges corresponds to theoretical predictions (th
 
 | ![Electrostatics_train](/figures/electrostatics_train.png)|
 |:--:|
-| *Figure 3. Electrostatic energy prediction: metrics of the train and validation samples during training.* |
+| *Figure 3. Electrostatic energy prediction: losses of the train and validation samples during training.* |
 
 | ![Electrostatics_test](/figures/electrostatics_test.png)|
 |:--:|
@@ -111,35 +112,35 @@ We intend to continue the project. In our opinion, there is a groundwork for imp
 
 <a name="sec7"></a>
 ### References
-<a id="selfavoid1">[1]</a>
+<a name="selfavoid1">[1]</a>
 Rosenbluth M. and Rosenbluth A. Monte Carlo Calculation of the Average Extension of Molecular Chains. 1995. J. Chem. Phys. 23(2): 356–359. https://doi.org/10.1063/1.1741967
 
-<a id="GBSA1">[2]</a>
+<a name="GBSA1">[2]</a>
 Kollman, P. A., Massova, I., Reyes, C. et al. Calculating Structures and Free Energies of Complex Molecules:  Combining Molecular Mechanics and Continuum Models. 2000. Accounts of Chemical Research. 33(12): 889-897. https://doi.org/10.1021/ar000033j
 
-<a id="GBSA2">[3]</a>
+<a name="GBSA2">[3]</a>
 Genheden, S. and Ryde, U. The MM/PBSA and MM/GBSA methods to estimate ligand-binding affinities. 2015. Expert opinion on drug discovery.  10(5): 1-13 https://doi.org/10.1517/17460441.2015.1032936
 
-<a id="amber">[4]</a>
+<a name="amber">[4]</a>
 D.A. Case, H.M. Aktulga, K. Belfon et al. 2023. Amber 2023, University of California, San Francisco.
 
-<a id="biobb">[5]</a>
+<a name="biobb">[5]</a>
 Andrio, P., Hospital, A., Conejero, J. et al. BioExcel Building Blocks, a software library for interoperable biomolecular simulation workflows. 2019. Sci Data. 6, 169. https://doi.org/10.1038/s41597-019-0177-4
 
-<a id="phenix">[6]</a>
+<a name="phenix">[6]</a>
 Liebschner, D., Afonine, P. V., Baker, M. L. et al. 2019. Macromolecular structure determination using x-rays, neutrons and electrons: recent developments in phenix. Acta Crystallogr D Struct Biol. 75, 861–877. https://doi:10.1107/S2059798319011471
 
-<a id="PDB2PQR">[7]</a>
+<a name="PDB2PQR">[7]</a>
 Dolinsky, T. D., Czodrowski, P., Li, H. et al. 2007. PDB2PQR: expanding and upgrading automated preparation of biomolecular structures for molecular simulations. 2007. Nucleic Acids Research, Volume 35, Issue suppl_2, 1 July , Pages W522–W525, https://doi.org/10.1093/nar/gkm276
 
-<a id="ProteinMPNN">[8]</a>
+<a name="ProteinMPNN">[8]</a>
 Dauparas, J.,  Anishchenko, I.,  Bennett, N.,  et al. 2022. Robust deep learning–based protein sequence design using ProteinMPNN. Science. 378: 49-56. DOI:10.1126/science.add2187
 
-<a id="PDBbind">[9]</a>
+<a name="PDBbind">[9]</a>
 Su, M., Yang, Q., Du, Y. et al. Comparative Assessment of Scoring Functions: The CASF-2016 Update. 2019. Journal of chemical information and modeling, 59(2): 895–913. https://doi.org/10.1021/acs.jcim.8b00545
 
-<a id="SKEMPI">[10]</a>
+<a name="SKEMPI">[10]</a>
 Jankauskaitė, J., Jiménez-García, B., Dapkūnas, J., Fernández-Recio, J., Moal, I.H. 2019. SKEMPI 2.0: an updated benchmark of changes in protein–protein binding energy, kinetics and thermodynamics upon mutation. Bioinformatics 35: 462–469 https://doi.org/10.1093/bioinformatics/bty635       
 
-<a id="MPAD">[11]</a>
+<a name="MPAD">[11]</a>
 Ridha, F., Kulandaisamy, A., Gromiha,  M. M. MPAD: A Database for Binding Affinity of Membrane Protein–protein Complexes and their Mutants. 2022. Journal of Molecular Biology. https://doi.org/10.1016/j.jmb.2022.167870
