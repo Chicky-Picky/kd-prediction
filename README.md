@@ -78,6 +78,7 @@ The distribution for pairs of charges corresponds to theoretical predictions (th
 | ![Electrostatics_train](/figures/electrostatics_train.png)|
 |:--:|
 | *Figure 3. Electrostatic energy prediction: metrics of the train and validation samples during training.* |
+
 | ![Electrostatics_test](/figures/electrostatics_test.png)|
 |:--:|
 | *Figure 4. Electrostatic energy prediction: correlation plots on the test samples.* |
