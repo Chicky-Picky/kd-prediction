@@ -1,5 +1,5 @@
-2023-05-11 18:09:09,655 - train - INFO - WormLikeChainGraphDataset(10)
-2023-05-11 18:09:09,665 - train - INFO - EdgeConvNodeGATModel(
+2023-05-16 23:40:50,940 - train - INFO - WormLikeChainGraphDataset(10)
+2023-05-16 23:40:50,962 - train - INFO - EdgeConvNodeGATModel(
   (convs): ModuleList(
     (0): MetaLayer(
       edge_model=EdgeConvLayer(
@@ -42,15 +42,82 @@
   )
 )
 Trainable parameters: 195
-2023-05-11 18:09:16,371 - trainer.trainer - INFO -     epoch          : 1
-2023-05-11 18:09:16,371 - trainer.trainer - INFO -     loss           : 0.20849128031568398
-2023-05-11 18:09:16,372 - trainer.trainer - INFO -     mean_squared_relative_mse: 206.22643373608298
-2023-05-11 18:09:23,807 - trainer.trainer - INFO -     val_epoch      : 1
-2023-05-11 18:09:23,808 - trainer.trainer - INFO -     val_loss       : 0.06993445940315723
-2023-05-11 18:09:23,808 - trainer.trainer - INFO -     val_mean_squared_relative_mse: 163.53228378295898
-2023-05-11 18:09:29,697 - trainer.trainer - INFO -     epoch          : 2
-2023-05-11 18:09:29,697 - trainer.trainer - INFO -     loss           : 0.20338324026670307
-2023-05-11 18:09:29,698 - trainer.trainer - INFO -     mean_squared_relative_mse: 198.32469459733693
-2023-05-11 18:09:35,536 - trainer.trainer - INFO -     val_epoch      : 2
-2023-05-11 18:09:35,537 - trainer.trainer - INFO -     val_loss       : 0.06649742275476456
-2023-05-11 18:09:35,537 - trainer.trainer - INFO -     val_mean_squared_relative_mse: 155.0447769165039
+2023-05-16 23:41:01,811 - trainer.trainer - INFO -     epoch          : 1
+2023-05-16 23:41:01,811 - trainer.trainer - INFO -     loss           : 0.06564804131630808
+2023-05-16 23:41:01,813 - trainer.trainer - INFO -     mean_squared_relative_mse: 101.75135760661215
+2023-05-16 23:41:09,479 - trainer.trainer - INFO -     val_epoch      : 1
+2023-05-16 23:41:09,480 - trainer.trainer - INFO -     val_loss       : 0.027103537693619728
+2023-05-16 23:41:09,481 - trainer.trainer - INFO -     val_mean_squared_relative_mse: 82.210280418396
+2023-05-16 23:41:09,501 - trainer.trainer - INFO - Saving checkpoint: ..\electrostatic\experiments\WormLikeChainGraphDataset_Net\checkpoint\EdgeConvNodeGATModel_example\checkpoint-epoch1.pth ...
+2023-05-16 23:41:09,519 - trainer.trainer - INFO - Saving current best: model_best.pth ...
+2023-05-16 23:41:16,520 - trainer.trainer - INFO -     epoch          : 2
+2023-05-16 23:41:16,521 - trainer.trainer - INFO -     loss           : 0.06519188254605979
+2023-05-16 23:41:16,521 - trainer.trainer - INFO -     mean_squared_relative_mse: 101.08385831769556
+2023-05-16 23:41:23,049 - trainer.trainer - INFO -     val_epoch      : 2
+2023-05-16 23:41:23,050 - trainer.trainer - INFO -     val_loss       : 0.026777515187859535
+2023-05-16 23:41:23,051 - trainer.trainer - INFO -     val_mean_squared_relative_mse: 81.28942012786865
+2023-05-16 23:41:23,074 - trainer.trainer - INFO - Saving checkpoint: ..\electrostatic\experiments\WormLikeChainGraphDataset_Net\checkpoint\EdgeConvNodeGATModel_example\checkpoint-epoch2.pth ...
+2023-05-16 23:41:23,102 - trainer.trainer - INFO - Saving current best: model_best.pth ...
+2023-05-16 23:41:29,853 - trainer.trainer - INFO -     epoch          : 3
+2023-05-16 23:41:29,854 - trainer.trainer - INFO -     loss           : 0.06489377492107451
+2023-05-16 23:41:29,854 - trainer.trainer - INFO -     mean_squared_relative_mse: 98.1848076749593
+2023-05-16 23:41:36,051 - trainer.trainer - INFO -     val_epoch      : 3
+2023-05-16 23:41:36,052 - trainer.trainer - INFO -     val_loss       : 0.0261767590418458
+2023-05-16 23:41:36,052 - trainer.trainer - INFO -     val_mean_squared_relative_mse: 79.59140205383301
+2023-05-16 23:41:36,070 - trainer.trainer - INFO - Saving checkpoint: ..\electrostatic\experiments\WormLikeChainGraphDataset_Net\checkpoint\EdgeConvNodeGATModel_example\checkpoint-epoch3.pth ...
+2023-05-16 23:41:36,088 - trainer.trainer - INFO - Saving current best: model_best.pth ...
+2023-05-16 23:41:42,489 - trainer.trainer - INFO -     epoch          : 4
+2023-05-16 23:41:42,490 - trainer.trainer - INFO -     loss           : 0.0652433165232651
+2023-05-16 23:41:42,490 - trainer.trainer - INFO -     mean_squared_relative_mse: 95.28035956528038
+2023-05-16 23:41:48,791 - trainer.trainer - INFO -     val_epoch      : 4
+2023-05-16 23:41:48,792 - trainer.trainer - INFO -     val_loss       : 0.024587303400039673
+2023-05-16 23:41:48,792 - trainer.trainer - INFO -     val_mean_squared_relative_mse: 75.0911636352539
+2023-05-16 23:41:48,810 - trainer.trainer - INFO - Saving checkpoint: ..\electrostatic\experiments\WormLikeChainGraphDataset_Net\checkpoint\EdgeConvNodeGATModel_example\checkpoint-epoch4.pth ...
+2023-05-16 23:41:48,844 - trainer.trainer - INFO - Saving current best: model_best.pth ...
+2023-05-16 23:41:55,435 - trainer.trainer - INFO -     epoch          : 5
+2023-05-16 23:41:55,436 - trainer.trainer - INFO -     loss           : 0.06434782699216157
+2023-05-16 23:41:55,437 - trainer.trainer - INFO -     mean_squared_relative_mse: 91.45424422062933
+2023-05-16 23:42:01,659 - trainer.trainer - INFO -     val_epoch      : 5
+2023-05-16 23:42:01,660 - trainer.trainer - INFO -     val_loss       : 0.024043831042945385
+2023-05-16 23:42:01,661 - trainer.trainer - INFO -     val_mean_squared_relative_mse: 73.54972171783447
+2023-05-16 23:42:01,691 - trainer.trainer - INFO - Saving checkpoint: ..\electrostatic\experiments\WormLikeChainGraphDataset_Net\checkpoint\EdgeConvNodeGATModel_example\checkpoint-epoch5.pth ...
+2023-05-16 23:42:01,711 - trainer.trainer - INFO - Saving current best: model_best.pth ...
+2023-05-16 23:42:08,240 - trainer.trainer - INFO -     epoch          : 6
+2023-05-16 23:42:08,242 - trainer.trainer - INFO -     loss           : 0.06440422986634076
+2023-05-16 23:42:08,243 - trainer.trainer - INFO -     mean_squared_relative_mse: 88.39047264121473
+2023-05-16 23:42:14,371 - trainer.trainer - INFO -     val_epoch      : 6
+2023-05-16 23:42:14,371 - trainer.trainer - INFO -     val_loss       : 0.023110046982765198
+2023-05-16 23:42:14,372 - trainer.trainer - INFO -     val_mean_squared_relative_mse: 70.89782047271729
+2023-05-16 23:42:14,401 - trainer.trainer - INFO - Saving checkpoint: ..\electrostatic\experiments\WormLikeChainGraphDataset_Net\checkpoint\EdgeConvNodeGATModel_example\checkpoint-epoch6.pth ...
+2023-05-16 23:42:14,417 - trainer.trainer - INFO - Saving current best: model_best.pth ...
+2023-05-16 23:42:20,923 - trainer.trainer - INFO -     epoch          : 7
+2023-05-16 23:42:20,923 - trainer.trainer - INFO -     loss           : 0.06400975049473345
+2023-05-16 23:42:20,924 - trainer.trainer - INFO -     mean_squared_relative_mse: 85.79069391824305
+2023-05-16 23:42:28,872 - trainer.trainer - INFO -     val_epoch      : 7
+2023-05-16 23:42:28,872 - trainer.trainer - INFO -     val_loss       : 0.01789437048137188
+2023-05-16 23:42:28,874 - trainer.trainer - INFO -     val_mean_squared_relative_mse: 56.742629051208496
+2023-05-16 23:42:28,892 - trainer.trainer - INFO - Saving checkpoint: ..\electrostatic\experiments\WormLikeChainGraphDataset_Net\checkpoint\EdgeConvNodeGATModel_example\checkpoint-epoch7.pth ...
+2023-05-16 23:42:28,913 - trainer.trainer - INFO - Saving current best: model_best.pth ...
+2023-05-16 23:42:35,658 - trainer.trainer - INFO -     epoch          : 8
+2023-05-16 23:42:35,659 - trainer.trainer - INFO -     loss           : 0.06385831255465746
+2023-05-16 23:42:35,659 - trainer.trainer - INFO -     mean_squared_relative_mse: 84.50138279609382
+2023-05-16 23:42:42,635 - trainer.trainer - INFO -     val_epoch      : 8
+2023-05-16 23:42:42,635 - trainer.trainer - INFO -     val_loss       : 0.007191773387603462
+2023-05-16 23:42:42,636 - trainer.trainer - INFO -     val_mean_squared_relative_mse: 25.47208845615387
+2023-05-16 23:42:42,654 - trainer.trainer - INFO - Saving checkpoint: ..\electrostatic\experiments\WormLikeChainGraphDataset_Net\checkpoint\EdgeConvNodeGATModel_example\checkpoint-epoch8.pth ...
+2023-05-16 23:42:42,670 - trainer.trainer - INFO - Saving current best: model_best.pth ...
+2023-05-16 23:42:49,572 - trainer.trainer - INFO -     epoch          : 9
+2023-05-16 23:42:49,573 - trainer.trainer - INFO -     loss           : 0.0641370362136513
+2023-05-16 23:42:49,573 - trainer.trainer - INFO -     mean_squared_relative_mse: 80.60823984444141
+2023-05-16 23:42:59,631 - trainer.trainer - INFO -     val_epoch      : 9
+2023-05-16 23:42:59,633 - trainer.trainer - INFO -     val_loss       : 0.0010595691273920238
+2023-05-16 23:42:59,633 - trainer.trainer - INFO -     val_mean_squared_relative_mse: 1.7782917618751526
+2023-05-16 23:42:59,653 - trainer.trainer - INFO - Saving checkpoint: ..\electrostatic\experiments\WormLikeChainGraphDataset_Net\checkpoint\EdgeConvNodeGATModel_example\checkpoint-epoch9.pth ...
+2023-05-16 23:42:59,669 - trainer.trainer - INFO - Saving current best: model_best.pth ...
+2023-05-16 23:43:06,366 - trainer.trainer - INFO -     epoch          : 10
+2023-05-16 23:43:06,366 - trainer.trainer - INFO -     loss           : 0.06366611178964376
+2023-05-16 23:43:06,367 - trainer.trainer - INFO -     mean_squared_relative_mse: 80.39837148971856
+2023-05-16 23:43:14,175 - trainer.trainer - INFO -     val_epoch      : 10
+2023-05-16 23:43:14,176 - trainer.trainer - INFO -     val_loss       : 0.028551005758345127
+2023-05-16 23:43:14,177 - trainer.trainer - INFO -     val_mean_squared_relative_mse: 55.73161697387695
+2023-05-16 23:43:14,194 - trainer.trainer - INFO - Saving checkpoint: ..\electrostatic\experiments\WormLikeChainGraphDataset_Net\checkpoint\EdgeConvNodeGATModel_example\checkpoint-epoch10.pth ...

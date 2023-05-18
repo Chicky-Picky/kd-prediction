@@ -19,6 +19,13 @@
             "raw_dirname": "data/"
         }
     },
+    "dataset_test": {
+        "type": "GbsaKdGraphDataset",
+        "args": {
+            "root": "../kd/ProteinMPNN/data_kd/",
+            "raw_dirname": "data/"
+        }
+    },
     "dataset_transforms": {},
     "dataloader": {
         "type": "set_dataloaders",
@@ -57,8 +64,8 @@
     "trainer": {
         "type": "Trainer",
         "args": {
-            "epochs": 2,
-            "checkpoint_freq": 10,
+            "epochs": 10,
+            "checkpoint_freq": 1,
             "monitor": "min val_loss",
             "early_stop": 10,
             "tensorboard": true

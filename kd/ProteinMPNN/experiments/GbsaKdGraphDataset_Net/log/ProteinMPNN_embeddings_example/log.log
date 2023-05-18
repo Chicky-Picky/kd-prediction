@@ -1,5 +1,5 @@
-2023-05-16 22:43:12,301 - train - INFO - GbsaKdGraphDataset(3)
-2023-05-16 22:43:12,319 - train - INFO - EdgeConvNodeGATModel(
+2023-05-16 23:49:04,222 - train - INFO - GbsaKdGraphDataset(3)
+2023-05-16 23:49:04,230 - train - INFO - EdgeConvNodeGATModel(
   (convs): ModuleList(
     (0): MetaLayer(
       edge_model=EdgeConvLayer(
@@ -42,15 +42,83 @@
   )
 )
 Trainable parameters: 957
-2023-05-16 22:43:20,037 - trainer.trainer - INFO -     epoch          : 1
-2023-05-16 22:43:20,038 - trainer.trainer - INFO -     loss           : 368.2233174641927
-2023-05-16 22:43:20,039 - trainer.trainer - INFO -     mean_squared_relative_mse: 0.9915417035420736
-2023-05-16 22:43:27,218 - trainer.trainer - INFO -     val_epoch      : 1
-2023-05-16 22:43:27,219 - trainer.trainer - INFO -     val_loss       : 0
-2023-05-16 22:43:27,220 - trainer.trainer - INFO -     val_mean_squared_relative_mse: 0
-2023-05-16 22:43:34,089 - trainer.trainer - INFO -     epoch          : 2
-2023-05-16 22:43:34,089 - trainer.trainer - INFO -     loss           : 368.2099202473958
-2023-05-16 22:43:34,090 - trainer.trainer - INFO -     mean_squared_relative_mse: 0.9915315906206766
-2023-05-16 22:43:40,460 - trainer.trainer - INFO -     val_epoch      : 2
-2023-05-16 22:43:40,461 - trainer.trainer - INFO -     val_loss       : 0
-2023-05-16 22:43:40,461 - trainer.trainer - INFO -     val_mean_squared_relative_mse: 0
+2023-05-16 23:49:11,300 - trainer.trainer - INFO -     epoch          : 1
+2023-05-16 23:49:11,301 - trainer.trainer - INFO -     loss           : 362.9766845703125
+2023-05-16 23:49:11,302 - trainer.trainer - INFO -     mean_squared_relative_mse: 0.9859413504600525
+2023-05-16 23:49:17,651 - trainer.trainer - INFO -     val_epoch      : 1
+2023-05-16 23:49:17,653 - trainer.trainer - INFO -     val_loss       : 0
+2023-05-16 23:49:17,653 - trainer.trainer - INFO -     val_mean_squared_relative_mse: 0
+2023-05-16 23:49:17,673 - trainer.trainer - INFO - Saving checkpoint: ..\kd\ProteinMPNN\experiments\GbsaKdGraphDataset_Net\checkpoint\ProteinMPNN_embeddings_example\checkpoint-epoch1.pth ...
+2023-05-16 23:49:17,700 - trainer.trainer - INFO - Saving current best: model_best.pth ...
+2023-05-16 23:49:24,145 - trainer.trainer - INFO -     epoch          : 2
+2023-05-16 23:49:24,145 - trainer.trainer - INFO -     loss           : 362.95013427734375
+2023-05-16 23:49:24,146 - trainer.trainer - INFO -     mean_squared_relative_mse: 0.9858755270640055
+2023-05-16 23:49:30,720 - trainer.trainer - INFO -     val_epoch      : 2
+2023-05-16 23:49:30,721 - trainer.trainer - INFO -     val_loss       : 0
+2023-05-16 23:49:30,721 - trainer.trainer - INFO -     val_mean_squared_relative_mse: 0
+2023-05-16 23:49:30,751 - trainer.trainer - INFO - Saving checkpoint: ..\kd\ProteinMPNN\experiments\GbsaKdGraphDataset_Net\checkpoint\ProteinMPNN_embeddings_example\checkpoint-epoch2.pth ...
+2023-05-16 23:49:30,769 - trainer.trainer - INFO - Saving current best: model_best.pth ...
+2023-05-16 23:49:39,706 - trainer.trainer - INFO -     epoch          : 3
+2023-05-16 23:49:39,707 - trainer.trainer - INFO -     loss           : 362.9369201660156
+2023-05-16 23:49:39,708 - trainer.trainer - INFO -     mean_squared_relative_mse: 0.9858726263046265
+2023-05-16 23:49:46,734 - trainer.trainer - INFO -     val_epoch      : 3
+2023-05-16 23:49:46,735 - trainer.trainer - INFO -     val_loss       : 0
+2023-05-16 23:49:46,735 - trainer.trainer - INFO -     val_mean_squared_relative_mse: 0
+2023-05-16 23:49:46,766 - trainer.trainer - INFO - Saving checkpoint: ..\kd\ProteinMPNN\experiments\GbsaKdGraphDataset_Net\checkpoint\ProteinMPNN_embeddings_example\checkpoint-epoch3.pth ...
+2023-05-16 23:49:46,793 - trainer.trainer - INFO - Saving current best: model_best.pth ...
+2023-05-16 23:49:53,494 - trainer.trainer - INFO -     epoch          : 4
+2023-05-16 23:49:53,495 - trainer.trainer - INFO -     loss           : 362.92572021484375
+2023-05-16 23:49:53,495 - trainer.trainer - INFO -     mean_squared_relative_mse: 0.9858875870704651
+2023-05-16 23:49:59,661 - trainer.trainer - INFO -     val_epoch      : 4
+2023-05-16 23:49:59,662 - trainer.trainer - INFO -     val_loss       : 0
+2023-05-16 23:49:59,662 - trainer.trainer - INFO -     val_mean_squared_relative_mse: 0
+2023-05-16 23:49:59,682 - trainer.trainer - INFO - Saving checkpoint: ..\kd\ProteinMPNN\experiments\GbsaKdGraphDataset_Net\checkpoint\ProteinMPNN_embeddings_example\checkpoint-epoch4.pth ...
+2023-05-16 23:49:59,698 - trainer.trainer - INFO - Saving current best: model_best.pth ...
+2023-05-16 23:50:06,421 - trainer.trainer - INFO -     epoch          : 5
+2023-05-16 23:50:06,421 - trainer.trainer - INFO -     loss           : 362.89975992838544
+2023-05-16 23:50:06,422 - trainer.trainer - INFO -     mean_squared_relative_mse: 0.9858585198720297
+2023-05-16 23:50:12,860 - trainer.trainer - INFO -     val_epoch      : 5
+2023-05-16 23:50:12,861 - trainer.trainer - INFO -     val_loss       : 0
+2023-05-16 23:50:12,861 - trainer.trainer - INFO -     val_mean_squared_relative_mse: 0
+2023-05-16 23:50:12,884 - trainer.trainer - INFO - Saving checkpoint: ..\kd\ProteinMPNN\experiments\GbsaKdGraphDataset_Net\checkpoint\ProteinMPNN_embeddings_example\checkpoint-epoch5.pth ...
+2023-05-16 23:50:12,904 - trainer.trainer - INFO - Saving current best: model_best.pth ...
+2023-05-16 23:50:19,416 - trainer.trainer - INFO -     epoch          : 6
+2023-05-16 23:50:19,417 - trainer.trainer - INFO -     loss           : 362.8758544921875
+2023-05-16 23:50:19,417 - trainer.trainer - INFO -     mean_squared_relative_mse: 0.9858325719833374
+2023-05-16 23:50:25,845 - trainer.trainer - INFO -     val_epoch      : 6
+2023-05-16 23:50:25,845 - trainer.trainer - INFO -     val_loss       : 0
+2023-05-16 23:50:25,846 - trainer.trainer - INFO -     val_mean_squared_relative_mse: 0
+2023-05-16 23:50:25,865 - trainer.trainer - INFO - Saving checkpoint: ..\kd\ProteinMPNN\experiments\GbsaKdGraphDataset_Net\checkpoint\ProteinMPNN_embeddings_example\checkpoint-epoch6.pth ...
+2023-05-16 23:50:25,885 - trainer.trainer - INFO - Saving current best: model_best.pth ...
+2023-05-16 23:50:32,231 - trainer.trainer - INFO -     epoch          : 7
+2023-05-16 23:50:32,233 - trainer.trainer - INFO -     loss           : 362.8372802734375
+2023-05-16 23:50:32,234 - trainer.trainer - INFO -     mean_squared_relative_mse: 0.9857544501622518
+2023-05-16 23:50:39,401 - trainer.trainer - INFO -     val_epoch      : 7
+2023-05-16 23:50:39,402 - trainer.trainer - INFO -     val_loss       : 0
+2023-05-16 23:50:39,402 - trainer.trainer - INFO -     val_mean_squared_relative_mse: 0
+2023-05-16 23:50:39,439 - trainer.trainer - INFO - Saving checkpoint: ..\kd\ProteinMPNN\experiments\GbsaKdGraphDataset_Net\checkpoint\ProteinMPNN_embeddings_example\checkpoint-epoch7.pth ...
+2023-05-16 23:50:39,475 - trainer.trainer - INFO - Saving current best: model_best.pth ...
+2023-05-16 23:50:47,096 - trainer.trainer - INFO -     epoch          : 8
+2023-05-16 23:50:47,097 - trainer.trainer - INFO -     loss           : 362.8271484375
+2023-05-16 23:50:47,098 - trainer.trainer - INFO -     mean_squared_relative_mse: 0.9857580860455831
+2023-05-16 23:50:53,755 - trainer.trainer - INFO -     val_epoch      : 8
+2023-05-16 23:50:53,756 - trainer.trainer - INFO -     val_loss       : 0
+2023-05-16 23:50:53,757 - trainer.trainer - INFO -     val_mean_squared_relative_mse: 0
+2023-05-16 23:50:53,780 - trainer.trainer - INFO - Saving checkpoint: ..\kd\ProteinMPNN\experiments\GbsaKdGraphDataset_Net\checkpoint\ProteinMPNN_embeddings_example\checkpoint-epoch8.pth ...
+2023-05-16 23:50:53,813 - trainer.trainer - INFO - Saving current best: model_best.pth ...
+2023-05-16 23:51:01,044 - trainer.trainer - INFO -     epoch          : 9
+2023-05-16 23:51:01,045 - trainer.trainer - INFO -     loss           : 362.8063049316406
+2023-05-16 23:51:01,046 - trainer.trainer - INFO -     mean_squared_relative_mse: 0.9857393701871237
+2023-05-16 23:51:07,986 - trainer.trainer - INFO -     val_epoch      : 9
+2023-05-16 23:51:07,986 - trainer.trainer - INFO -     val_loss       : 0
+2023-05-16 23:51:07,987 - trainer.trainer - INFO -     val_mean_squared_relative_mse: 0
+2023-05-16 23:51:08,016 - trainer.trainer - INFO - Saving checkpoint: ..\kd\ProteinMPNN\experiments\GbsaKdGraphDataset_Net\checkpoint\ProteinMPNN_embeddings_example\checkpoint-epoch9.pth ...
+2023-05-16 23:51:08,033 - trainer.trainer - INFO - Saving current best: model_best.pth ...
+2023-05-16 23:51:15,961 - trainer.trainer - INFO -     epoch          : 10
+2023-05-16 23:51:15,971 - trainer.trainer - INFO -     loss           : 362.78014119466144
+2023-05-16 23:51:16,012 - trainer.trainer - INFO -     mean_squared_relative_mse: 0.9856922825177511
+2023-05-16 23:51:24,200 - trainer.trainer - INFO -     val_epoch      : 10
+2023-05-16 23:51:24,201 - trainer.trainer - INFO -     val_loss       : 0
+2023-05-16 23:51:24,201 - trainer.trainer - INFO -     val_mean_squared_relative_mse: 0
+2023-05-16 23:51:24,221 - trainer.trainer - INFO - Saving checkpoint: ..\kd\ProteinMPNN\experiments\GbsaKdGraphDataset_Net\checkpoint\ProteinMPNN_embeddings_example\checkpoint-epoch10.pth ...
+2023-05-16 23:51:24,240 - trainer.trainer - INFO - Saving current best: model_best.pth ...

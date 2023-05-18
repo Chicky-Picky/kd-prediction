@@ -15,6 +15,17 @@ If you intend to use our embeddings, please, follow the instructions:
 
 You will find the results of the training in `experiments` directory: checkpoints and logs will be stored in `experiments/GbsaKdGraphDataset_Net/checkpoint` and `experiments/GbsaKdGraphDataset_Net/log` directories, respectively.
 
+To check training process via plotting train and validation losses and metrics, please, first make sure you are in `kd-prediction/PPINN` directory and then run our script as follows:
+`python train_plotter.py`
+
+You will find the resulting pdf-file `TrainResults.pdf` in `experiments/GbsaKdGraphDataset_Net/log/EdgeConvNodeGAT_embeddings_example/` directory.
+
+To check training results and test statistics via plotting, please, first make sure you are in `kd-prediction/PPINN` directory and then run our scripts as follows:
+`python test.py`
+`python test_plotter.py`
+
+You will find the resulting pnf-files in `experiments/GbsaKdGraphDataset_Net/test_log/EdgeConvNodeGAT_embeddings_example/` directory.
+
 If you intend to use ProteinMPNN $`C_\alpha`$ only model embeddings, please, follow the instructions:
 1) clone ProteinMPNN repository
 2) run `python ProteinMPNN/helper_scripts/parse_multiple_chains.py` with relevant path arguments and `--ca_only` flag to parse your raw pdb-files into jsonl-file
@@ -23,3 +34,14 @@ If you intend to use ProteinMPNN $`C_\alpha`$ only model embeddings, please, fol
 5) make sure you are in `kd-prediction/kd-prediction/PPINN` directory and run `python train.py -c ../kd/ProteinMPNN/configs/config_graph_EdgeConvNodeGATModel.json --run-dir ProteinMPNN_embeddings_example`
 
 You will find the results of the training in `experiments` directory: checkpoints and logs will be stored in `experiments/GbsaKdGraphDataset_Net/checkpoint` and `experiments/GbsaKdGraphDataset_Net/log` directories, respectively.
+
+To check training process via plotting train and validation losses and metrics, please, first make sure you are in `kd-prediction/PPINN` directory and then run our script as follows:
+`python train_plotter.py`
+
+You will find the resulting pdf-file `TrainResults.pdf` in `experiments/GbsaKdGraphDataset_Net/log/ProteinMPNN_embeddings_example/` directory.
+
+To check training results and test statistics via plotting, please, first make sure you are in `kd-prediction/PPINN` directory and then run our scripts as follows:
+`python test.py`
+`python test_plotter.py`
+
+You will find the resulting pnf-files in `experiments/GbsaKdGraphDataset_Net/test_log/ProteinMPNN_embeddings_example/` directory.

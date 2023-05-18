@@ -1,0 +1,48 @@
+2023-05-17 00:32:10,993 - test - INFO - ..\gbsa\data\valid
+2023-05-17 00:32:11,005 - test - INFO - EdgeConvNodeGATModel(
+  (convs): ModuleList(
+    (0): MetaLayer(
+      edge_model=EdgeConvLayer(
+      (edge_mlp): Sequential(
+        (0): Linear(in_features=49, out_features=2, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=2, out_features=2, bias=True)
+      )
+    ),
+      node_model=GATConv(24, 2, heads=1),
+      global_model=None
+    )
+    (1-3): 3 x MetaLayer(
+      edge_model=EdgeConvLayer(
+      (edge_mlp): Sequential(
+        (0): Linear(in_features=6, out_features=2, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=2, out_features=2, bias=True)
+      )
+    ),
+      node_model=GATConv(2, 2, heads=1),
+      global_model=None
+    )
+  )
+  (linear_layer_nodes): ModuleList(
+    (0-2): 3 x Linear(in_features=2, out_features=2, bias=True)
+  )
+  (linear_layer_edges): ModuleList(
+    (0-2): 3 x Linear(in_features=2, out_features=2, bias=True)
+  )
+  (batchnorms): ModuleList(
+    (0-2): 3 x BatchNorm(2)
+  )
+  (mlp): Sequential(
+    (0): Linear(in_features=2, out_features=2, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=2, out_features=1, bias=True)
+    (3): ReLU()
+    (4): Linear(in_features=1, out_features=1, bias=True)
+  )
+)
+Trainable parameters: 333
+2023-05-17 00:32:11,052 - test - INFO - number - predicted - target - loss - mean_squared_relative_mse
+2023-05-17 00:32:11,098 - test - INFO - 1 - -0.27245503664016724 - -1.2300000190734863 - 0.916892409324646 - 0.6060495972633362
+2023-05-17 00:32:11,136 - test - INFO - 2 - -0.27245503664016724 - 15.630000114440918 - 252.88809204101562 - 1.0351669788360596
+2023-05-17 00:32:11,172 - test - INFO - 3 - -0.27245503664016724 - 6.0 - 39.343692779541016 - 1.092880368232727

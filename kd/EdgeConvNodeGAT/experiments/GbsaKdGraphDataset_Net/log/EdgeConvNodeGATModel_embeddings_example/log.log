@@ -1,5 +1,5 @@
-2023-05-14 18:29:48,152 - train - INFO - GbsaKdGraphDataset(3)
-2023-05-14 18:29:48,161 - train - INFO - EdgeConvNodeGATModel(
+2023-05-16 23:46:02,250 - train - INFO - GbsaKdGraphDataset(3)
+2023-05-16 23:46:02,267 - train - INFO - EdgeConvNodeGATModel(
   (convs): ModuleList(
     (0): MetaLayer(
       edge_model=EdgeConvLayer(
@@ -42,15 +42,83 @@
   )
 )
 Trainable parameters: 201
-2023-05-14 18:29:56,139 - trainer.trainer - INFO -     epoch          : 1
-2023-05-14 18:29:56,140 - trainer.trainer - INFO -     loss           : 386.7432454427083
-2023-05-14 18:29:56,141 - trainer.trainer - INFO -     mean_squared_relative_mse: 1.013895869255066
-2023-05-14 18:30:01,919 - trainer.trainer - INFO -     val_epoch      : 1
-2023-05-14 18:30:01,920 - trainer.trainer - INFO -     val_loss       : 0
-2023-05-14 18:30:01,921 - trainer.trainer - INFO -     val_mean_squared_relative_mse: 0
-2023-05-14 18:30:10,282 - trainer.trainer - INFO -     epoch          : 2
-2023-05-14 18:30:10,283 - trainer.trainer - INFO -     loss           : 386.7272186279297
-2023-05-14 18:30:10,283 - trainer.trainer - INFO -     mean_squared_relative_mse: 1.013879398504893
-2023-05-14 18:30:15,701 - trainer.trainer - INFO -     val_epoch      : 2
-2023-05-14 18:30:15,702 - trainer.trainer - INFO -     val_loss       : 0
-2023-05-14 18:30:15,703 - trainer.trainer - INFO -     val_mean_squared_relative_mse: 0
+2023-05-16 23:46:12,208 - trainer.trainer - INFO -     epoch          : 1
+2023-05-16 23:46:12,208 - trainer.trainer - INFO -     loss           : 383.16675821940106
+2023-05-16 23:46:12,209 - trainer.trainer - INFO -     mean_squared_relative_mse: 1.0093008081118267
+2023-05-16 23:46:18,423 - trainer.trainer - INFO -     val_epoch      : 1
+2023-05-16 23:46:18,423 - trainer.trainer - INFO -     val_loss       : 0
+2023-05-16 23:46:18,424 - trainer.trainer - INFO -     val_mean_squared_relative_mse: 0
+2023-05-16 23:46:18,441 - trainer.trainer - INFO - Saving checkpoint: ..\kd\EdgeConvNodeGAT\experiments\GbsaKdGraphDataset_Net\checkpoint\EdgeConvNodeGATModel_embeddings_example\checkpoint-epoch1.pth ...
+2023-05-16 23:46:18,469 - trainer.trainer - INFO - Saving current best: model_best.pth ...
+2023-05-16 23:46:27,961 - trainer.trainer - INFO -     epoch          : 2
+2023-05-16 23:46:27,962 - trainer.trainer - INFO -     loss           : 383.1406606038411
+2023-05-16 23:46:27,963 - trainer.trainer - INFO -     mean_squared_relative_mse: 1.009288489818573
+2023-05-16 23:46:34,292 - trainer.trainer - INFO -     val_epoch      : 2
+2023-05-16 23:46:34,293 - trainer.trainer - INFO -     val_loss       : 0
+2023-05-16 23:46:34,294 - trainer.trainer - INFO -     val_mean_squared_relative_mse: 0
+2023-05-16 23:46:34,320 - trainer.trainer - INFO - Saving checkpoint: ..\kd\EdgeConvNodeGAT\experiments\GbsaKdGraphDataset_Net\checkpoint\EdgeConvNodeGATModel_embeddings_example\checkpoint-epoch2.pth ...
+2023-05-16 23:46:34,338 - trainer.trainer - INFO - Saving current best: model_best.pth ...
+2023-05-16 23:46:43,706 - trainer.trainer - INFO -     epoch          : 3
+2023-05-16 23:46:43,707 - trainer.trainer - INFO -     loss           : 383.0675557454427
+2023-05-16 23:46:43,707 - trainer.trainer - INFO -     mean_squared_relative_mse: 1.0091352661450703
+2023-05-16 23:46:49,834 - trainer.trainer - INFO -     val_epoch      : 3
+2023-05-16 23:46:49,835 - trainer.trainer - INFO -     val_loss       : 0
+2023-05-16 23:46:49,835 - trainer.trainer - INFO -     val_mean_squared_relative_mse: 0
+2023-05-16 23:46:49,853 - trainer.trainer - INFO - Saving checkpoint: ..\kd\EdgeConvNodeGAT\experiments\GbsaKdGraphDataset_Net\checkpoint\EdgeConvNodeGATModel_embeddings_example\checkpoint-epoch3.pth ...
+2023-05-16 23:46:49,869 - trainer.trainer - INFO - Saving current best: model_best.pth ...
+2023-05-16 23:46:58,998 - trainer.trainer - INFO -     epoch          : 4
+2023-05-16 23:46:58,999 - trainer.trainer - INFO -     loss           : 383.0427958170573
+2023-05-16 23:46:58,999 - trainer.trainer - INFO -     mean_squared_relative_mse: 1.0091283122698467
+2023-05-16 23:47:05,339 - trainer.trainer - INFO -     val_epoch      : 4
+2023-05-16 23:47:05,339 - trainer.trainer - INFO -     val_loss       : 0
+2023-05-16 23:47:05,340 - trainer.trainer - INFO -     val_mean_squared_relative_mse: 0
+2023-05-16 23:47:05,357 - trainer.trainer - INFO - Saving checkpoint: ..\kd\EdgeConvNodeGAT\experiments\GbsaKdGraphDataset_Net\checkpoint\EdgeConvNodeGATModel_embeddings_example\checkpoint-epoch4.pth ...
+2023-05-16 23:47:05,374 - trainer.trainer - INFO - Saving current best: model_best.pth ...
+2023-05-16 23:47:14,555 - trainer.trainer - INFO -     epoch          : 5
+2023-05-16 23:47:14,556 - trainer.trainer - INFO -     loss           : 383.0217692057292
+2023-05-16 23:47:14,557 - trainer.trainer - INFO -     mean_squared_relative_mse: 1.0091352065404255
+2023-05-16 23:47:20,690 - trainer.trainer - INFO -     val_epoch      : 5
+2023-05-16 23:47:20,690 - trainer.trainer - INFO -     val_loss       : 0
+2023-05-16 23:47:20,691 - trainer.trainer - INFO -     val_mean_squared_relative_mse: 0
+2023-05-16 23:47:20,708 - trainer.trainer - INFO - Saving checkpoint: ..\kd\EdgeConvNodeGAT\experiments\GbsaKdGraphDataset_Net\checkpoint\EdgeConvNodeGATModel_embeddings_example\checkpoint-epoch5.pth ...
+2023-05-16 23:47:20,735 - trainer.trainer - INFO - Saving current best: model_best.pth ...
+2023-05-16 23:47:30,493 - trainer.trainer - INFO -     epoch          : 6
+2023-05-16 23:47:30,494 - trainer.trainer - INFO -     loss           : 382.9593861897786
+2023-05-16 23:47:30,495 - trainer.trainer - INFO -     mean_squared_relative_mse: 1.0090218981107075
+2023-05-16 23:47:37,014 - trainer.trainer - INFO -     val_epoch      : 6
+2023-05-16 23:47:37,015 - trainer.trainer - INFO -     val_loss       : 0
+2023-05-16 23:47:37,016 - trainer.trainer - INFO -     val_mean_squared_relative_mse: 0
+2023-05-16 23:47:37,047 - trainer.trainer - INFO - Saving checkpoint: ..\kd\EdgeConvNodeGAT\experiments\GbsaKdGraphDataset_Net\checkpoint\EdgeConvNodeGATModel_embeddings_example\checkpoint-epoch6.pth ...
+2023-05-16 23:47:37,079 - trainer.trainer - INFO - Saving current best: model_best.pth ...
+2023-05-16 23:47:47,116 - trainer.trainer - INFO -     epoch          : 7
+2023-05-16 23:47:47,117 - trainer.trainer - INFO -     loss           : 382.9391733805339
+2023-05-16 23:47:47,117 - trainer.trainer - INFO -     mean_squared_relative_mse: 1.0090291500091553
+2023-05-16 23:47:55,401 - trainer.trainer - INFO -     val_epoch      : 7
+2023-05-16 23:47:55,402 - trainer.trainer - INFO -     val_loss       : 0
+2023-05-16 23:47:55,403 - trainer.trainer - INFO -     val_mean_squared_relative_mse: 0
+2023-05-16 23:47:55,422 - trainer.trainer - INFO - Saving checkpoint: ..\kd\EdgeConvNodeGAT\experiments\GbsaKdGraphDataset_Net\checkpoint\EdgeConvNodeGATModel_embeddings_example\checkpoint-epoch7.pth ...
+2023-05-16 23:47:55,438 - trainer.trainer - INFO - Saving current best: model_best.pth ...
+2023-05-16 23:48:05,430 - trainer.trainer - INFO -     epoch          : 8
+2023-05-16 23:48:05,431 - trainer.trainer - INFO -     loss           : 382.8956247965495
+2023-05-16 23:48:05,431 - trainer.trainer - INFO -     mean_squared_relative_mse: 1.0089730819066365
+2023-05-16 23:48:12,833 - trainer.trainer - INFO -     val_epoch      : 8
+2023-05-16 23:48:12,834 - trainer.trainer - INFO -     val_loss       : 0
+2023-05-16 23:48:12,835 - trainer.trainer - INFO -     val_mean_squared_relative_mse: 0
+2023-05-16 23:48:12,861 - trainer.trainer - INFO - Saving checkpoint: ..\kd\EdgeConvNodeGAT\experiments\GbsaKdGraphDataset_Net\checkpoint\EdgeConvNodeGATModel_embeddings_example\checkpoint-epoch8.pth ...
+2023-05-16 23:48:12,884 - trainer.trainer - INFO - Saving current best: model_best.pth ...
+2023-05-16 23:48:24,539 - trainer.trainer - INFO -     epoch          : 9
+2023-05-16 23:48:24,540 - trainer.trainer - INFO -     loss           : 382.8374989827474
+2023-05-16 23:48:24,540 - trainer.trainer - INFO -     mean_squared_relative_mse: 1.0088622172673543
+2023-05-16 23:48:30,808 - trainer.trainer - INFO -     val_epoch      : 9
+2023-05-16 23:48:30,808 - trainer.trainer - INFO -     val_loss       : 0
+2023-05-16 23:48:30,809 - trainer.trainer - INFO -     val_mean_squared_relative_mse: 0
+2023-05-16 23:48:30,833 - trainer.trainer - INFO - Saving checkpoint: ..\kd\EdgeConvNodeGAT\experiments\GbsaKdGraphDataset_Net\checkpoint\EdgeConvNodeGATModel_embeddings_example\checkpoint-epoch9.pth ...
+2023-05-16 23:48:30,850 - trainer.trainer - INFO - Saving current best: model_best.pth ...
+2023-05-16 23:48:40,848 - trainer.trainer - INFO -     epoch          : 10
+2023-05-16 23:48:40,849 - trainer.trainer - INFO -     loss           : 382.8002166748047
+2023-05-16 23:48:40,849 - trainer.trainer - INFO -     mean_squared_relative_mse: 1.0088149905204773
+2023-05-16 23:48:47,135 - trainer.trainer - INFO -     val_epoch      : 10
+2023-05-16 23:48:47,136 - trainer.trainer - INFO -     val_loss       : 0
+2023-05-16 23:48:47,137 - trainer.trainer - INFO -     val_mean_squared_relative_mse: 0
+2023-05-16 23:48:47,160 - trainer.trainer - INFO - Saving checkpoint: ..\kd\EdgeConvNodeGAT\experiments\GbsaKdGraphDataset_Net\checkpoint\EdgeConvNodeGATModel_embeddings_example\checkpoint-epoch10.pth ...
+2023-05-16 23:48:47,180 - trainer.trainer - INFO - Saving current best: model_best.pth ...

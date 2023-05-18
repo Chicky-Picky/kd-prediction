@@ -1,0 +1,55 @@
+2023-05-17 00:32:10,179 - test - INFO - ..\electrostatic\data
+2023-05-17 00:32:10,191 - test - INFO - EdgeConvNodeGATModel(
+  (convs): ModuleList(
+    (0): MetaLayer(
+      edge_model=EdgeConvLayer(
+      (edge_mlp): Sequential(
+        (0): Linear(in_features=3, out_features=2, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=2, out_features=2, bias=True)
+      )
+    ),
+      node_model=GATConv(1, 2, heads=1),
+      global_model=None
+    )
+    (1-3): 3 x MetaLayer(
+      edge_model=EdgeConvLayer(
+      (edge_mlp): Sequential(
+        (0): Linear(in_features=6, out_features=2, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=2, out_features=2, bias=True)
+      )
+    ),
+      node_model=GATConv(2, 2, heads=1),
+      global_model=None
+    )
+  )
+  (linear_layer_nodes): ModuleList(
+    (0-2): 3 x Linear(in_features=2, out_features=2, bias=True)
+  )
+  (linear_layer_edges): ModuleList(
+    (0-2): 3 x Linear(in_features=2, out_features=2, bias=True)
+  )
+  (batchnorms): ModuleList(
+    (0-2): 3 x BatchNorm(2)
+  )
+  (mlp): Sequential(
+    (0): Linear(in_features=2, out_features=2, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=2, out_features=1, bias=True)
+    (3): ReLU()
+    (4): Linear(in_features=1, out_features=1, bias=True)
+  )
+)
+Trainable parameters: 195
+2023-05-17 00:32:10,794 - test - INFO - number - predicted - target - loss - mean_squared_relative_mse
+2023-05-17 00:32:10,822 - test - INFO - 1 - -0.048951879143714905 - -0.032995134592056274 - 0.0002546176838222891 - 0.23387765884399414
+2023-05-17 00:32:10,837 - test - INFO - 2 - -0.1443464756011963 - 0.006342243868857622 - 0.02270709164440632 - 564.5151977539062
+2023-05-17 00:32:10,856 - test - INFO - 3 - 0.010590136051177979 - -0.03061816841363907 - 0.0016981243388727307 - 1.8113863468170166
+2023-05-17 00:32:10,872 - test - INFO - 4 - -0.03777860105037689 - -0.25329434871673584 - 0.046447038650512695 - 0.7239474058151245
+2023-05-17 00:32:10,892 - test - INFO - 5 - -0.02802613377571106 - -0.3885965049266815 - 0.13001099228858948 - 0.8609586358070374
+2023-05-17 00:32:10,908 - test - INFO - 6 - -0.14120838046073914 - 0.17233815789222717 - 0.09831143170595169 - 3.3101000785827637
+2023-05-17 00:32:10,925 - test - INFO - 7 - -0.004953131079673767 - -0.47414517402648926 - 0.22014115750789642 - 0.9792162179946899
+2023-05-17 00:32:10,946 - test - INFO - 8 - -0.15196701884269714 - -0.27849870920181274 - 0.01601026952266693 - 0.20642024278640747
+2023-05-17 00:32:10,966 - test - INFO - 9 - -0.004986673593521118 - 0.015531949698925018 - 0.00042101391591131687 - 1.7451971769332886
+2023-05-17 00:32:10,983 - test - INFO - 10 - -0.14120838046073914 - 0.2704322338104248 - 0.16944798827171326 - 2.316965103149414
