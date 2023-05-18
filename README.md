@@ -79,7 +79,8 @@ The distribution for pairs of charges corresponds to theoretical predictions (th
 |:--:|
 | *Figure 3. Electrostatic energy prediction: metrics of the train and validation samples during training.* |
 | ![Electrostatics_test](/figures/electrostatics_test.png)|
-|:--:| | *Figure 4. Electrostatic energy prediction: correlation plots on the test samples.* |
+|:--:|
+| *Figure 4. Electrostatic energy prediction: correlation plots on the test samples.* |
 On the figures above MSE for train and validation sets dependence on the epoch is presented FC and GAT models. The correlation plots for test datasets are also provided. Both models learned to perfectly predict Coulomb law in case of two atom interactions, the correlation are equal to 1. With an increase of chain-like molecule size the lack of FC model capacity appeared. Let’s emphasize that FC model struggled to learn rotational invariance, without the augmentation procedure the perfomance was even worse. GAT architecture, on the contrary, did not experience such issues. The results of testing on samples of chain-like molecules with 16 and 32 atoms are the following: 0.69 and 0.50 for FC opposed to 0.94 and 0.84 for GAT, respectively. Hence, we can make a conclusion that predictive power of GAT architecture higher than the FC models one. In further problems we will employ GAT architectures due the higher perfomance.
 
 The dG dataset was prepared in the procedure described in the methods section. Here we provide the results of training GAT model on the dG problem.
