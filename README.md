@@ -116,7 +116,7 @@ We intend to continue the project. In our opinion, there is a groundwork for imp
 <a name="sec7"></a>
 ### References
 <a name="techniques">[1]</a>
-Kastritis P.L. and Bonvin A.M. On the binding affinity of macromolecular interactions: daring to ask why proteins interact. 2012. J. R. Soc. Interface. 10(79):20120835. doi: 10.1098/rsif.2012.0835.
+Kastritis P.L. and Bonvin A.M. On the binding affinity of macromolecular interactions: daring to ask why proteins interact. 2012. J. R. Soc. Interface. 10(79):20120835. https://doi.org/10.1098/rsif.2012.0835.
 
 <a name="selfavoid">[2]</a>
 Rosenbluth M. and Rosenbluth A. Monte Carlo Calculation of the Average Extension of Molecular Chains. 1995. J. Chem. Phys. 23(2): 356–359. https://doi.org/10.1063/1.1741967
