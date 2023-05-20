@@ -16,7 +16,7 @@ _This repository provides results and code for the project "Prediction of protei
 - [Repository structure](#sec4) </br>
 - [Results](#sec5) </br>
 - [Conclusions](#sec6) </br>
-- [Literature](#sec7) </br>
+- [References](#sec7) </br>
 
 <a name="sec1"></a>
 ### Background:
