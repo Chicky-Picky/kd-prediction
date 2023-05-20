@@ -134,13 +134,13 @@ D.A. Case, H.M. Aktulga, K. Belfon et al. 2023. Amber 2023, University of Califo
 Andrio, P., Hospital, A., Conejero, J. et al. BioExcel Building Blocks, a software library for interoperable biomolecular simulation workflows. 2019. Sci Data. 6, 169. https://doi.org/10.1038/s41597-019-0177-4
 
 <a name="phenix">[7]</a>
-Liebschner, D., Afonine, P. V., Baker, M. L. et al. 2019. Macromolecular structure determination using x-rays, neutrons and electrons: recent developments in phenix. Acta Crystallogr D Struct Biol. 75, 861–877. https://doi:10.1107/S2059798319011471
+Liebschner, D., Afonine, P. V., Baker, M. L. et al. 2019. Macromolecular structure determination using x-rays, neutrons and electrons: recent developments in phenix. Acta Crystallogr D Struct Biol. 75, 861–877. https://doi.org/10.1107/S2059798319011471
 
 <a name="PDB2PQR">[8]</a>
 Dolinsky, T. D., Czodrowski, P., Li, H. et al. 2007. PDB2PQR: expanding and upgrading automated preparation of biomolecular structures for molecular simulations. 2007. Nucleic Acids Research, Volume 35, Issue suppl_2, 1 July , Pages W522–W525, https://doi.org/10.1093/nar/gkm276
 
 <a name="ProteinMPNN">[9]</a>
-Dauparas, J.,  Anishchenko, I.,  Bennett, N.,  et al. 2022. Robust deep learning–based protein sequence design using ProteinMPNN. Science. 378: 49-56. https://doi:10.1126/science.add2187
+Dauparas, J.,  Anishchenko, I.,  Bennett, N.,  et al. 2022. Robust deep learning–based protein sequence design using ProteinMPNN. Science. 378: 49-56. https://doi.org/10.1126/science.add2187
 
 <a name="PDBbind">[10]</a>
 Su, M., Yang, Q., Du, Y. et al. Comparative Assessment of Scoring Functions: The CASF-2016 Update. 2019. Journal of chemical information and modeling, 59(2): 895–913. https://doi.org/10.1021/acs.jcim.8b00545
