@@ -62,7 +62,7 @@ Prior to implementing transfer learning procedure, we developed and adjusted tra
 ### Repository structure:  
 - [PPINN](/PPINN) contains core project files
 - [data_preparation](data_preparation) contains examples for data preparation from raw pdb-files for both GBSA and $`K_d`$ prediction
-- [electrostatics](electrostatics) contains examples for electrostatic energy of chain-like molecules prediction
+- [electrostatics](electrostatic) contains examples for electrostatic energy of chain-like molecules prediction
 - [figures](figures) contains figures for README.md you are currently reading
 - [gbsa](gbsa) contains examples for GBSA energy of real molecules prediction
 - [kd](kd) contains examples for $`\ln(K_d)`$  prediction
